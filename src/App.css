@@ -1,7 +1,4 @@
 .cityButtons {
-  /* center horizontally */
-  margin-left: auto;
-  margin-right: auto;
   /* center vertically */
   display: flex;
   justify-content: center;
@@ -17,13 +14,12 @@
   color: black;
   padding: 10px 10px; /* reduced padding */
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 13px; /* reduced font size */
   margin: 2px; /* reduced margin */
   cursor: pointer;
   border-radius: 12px;
-  margin-bottom: -80px;
+  margin-top: 30px;
+  margin-bottom: -30px;
 }
 
 .weather-card {
@@ -74,4 +70,11 @@
   cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+
+.weatherApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
 }
