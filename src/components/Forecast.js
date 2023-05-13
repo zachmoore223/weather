@@ -42,23 +42,15 @@ export default function Forecast({activeCity, latitude, longitude}) {
     changeCity();
   }, [activeCity]);
 
-  if(showForecast==true){
+
   return (
   <div>
-    <div className="forecastSection">
-    <button className="forecastButton" onClick={()=> {setShowForecast(false)}}>Hide Forecast</button>
-    </div>
     <br /><br />
     <div>
     <ForecastTable temperatureHigh={temperatureHigh} temperatureLow={temperatureLow} cloudCoverage={cloudCoverage} chanceOfRain={chanceOfRain}/>
     </div>
   </div>
-  );} else {
-    return (
-    <div className="forecastSection">
-    <button className="forecastButton" onClick={()=> {setShowForecast(true)}}>Show Forecast</button>
-    </div>
- ); }
+  );
 
 }
 /* Takes current day and makes an array call daysOfWeek with numbers 0-6 (o being Sunday) */
