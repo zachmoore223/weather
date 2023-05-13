@@ -96,16 +96,22 @@ export default function Weather() {
 
       </div>
       <br /> <br />
-      <div className="weatherApp">
+      <div className="weather-app">
             <ul>
                 <li className="weather-card">
-                <p> {activeCity} &nbsp;&nbsp;&nbsp; </p> <Time />
+                <p> <strong> {activeCity} </strong>  </p> 
+                <Time />
                 <WeatherIcon cloudCoverage={cloudCoverage} /> &nbsp;&nbsp;
                 <p className="temperature">{temperature} &#8457;</p>
                 <p className="wind">Wind Speed: <strong> {windSpeed} mph</strong></p>
                 <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
                 </li>
+            </ul>
+            <br /> <br />
+            <ul className="hourly-card">
+            <p> <strong> HOURLY FORECAST</strong> </p>
+            <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
             </ul>
         </div>
     </div>
