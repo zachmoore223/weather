@@ -110,7 +110,7 @@ export default function Weather() {
             </ul>
             <br /> <br />
             <ul className="hourly-card">
-            <p> <strong> HOURLY FORECAST</strong> </p>
+            <p> <strong> NEXT FIVE DAYS FORECAST</strong> </p>
             <Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
         </div>

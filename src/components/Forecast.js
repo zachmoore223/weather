@@ -7,7 +7,7 @@ export default function Forecast({activeCity, latitude, longitude}) {
   const [chanceOfRain, setChanceOfRain] = useState("");
   const [cloudCoverage, setCloudCoverage] = useState("");
   const [windSpeed, setWindSpeed] = useState("");
-  const [showForecast, setShowForecast] = useState(false);
+  const [showForecast, setShowForecast] = useState('weekly');
 
   useEffect(() => {
     function changeCity() {
@@ -78,8 +78,7 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
             <th><strong>{daysOfWeek[daysArray[3]]}</strong></th>
             <th><strong>{daysOfWeek[daysArray[4]]}</strong></th>
             <th><strong>{daysOfWeek[daysArray[5]]}</strong></th>
-            <th><strong>{daysOfWeek[daysArray[6]]}</strong></th>
-            <th><strong>{daysOfWeek[daysArray[0]]}</strong></th>
+
           </tr>
         </thead>
         
@@ -92,8 +91,7 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
             <td>High: <strong> {temperatureHigh[3]}</strong></td>
             <td>High: <strong> {temperatureHigh[4]}</strong></td>
             <td>High: <strong> {temperatureHigh[5]}</strong></td>
-            <td>High: <strong> {temperatureHigh[6]}</strong></td>
-            <td>High: <strong> {temperatureHigh[0]}</strong></td>
+
           </tr>
 
           {/* WEATHER ICON BASED ON CLOUD COVERAGE */}
@@ -103,8 +101,7 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
             <td><WeatherIcon cloudCoverage={cloudCoverage[3]}/></td>
             <td><WeatherIcon cloudCoverage={cloudCoverage[4]}/></td>
             <td><WeatherIcon cloudCoverage={cloudCoverage[5]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[6]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[0]}/></td>
+
           </tr>
 
           {/* LOW TEMPERATURES */}
@@ -114,8 +111,7 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
             <td>Low: <strong> {temperatureLow[3]}</strong></td>
             <td>Low: <strong> {temperatureLow[4]}</strong></td>
             <td>Low: <strong> {temperatureLow[5]}</strong></td>
-            <td>Low: <strong> {temperatureLow[6]}</strong></td>
-            <td>Low: <strong> {temperatureLow[0]}</strong></td>
+
           </tr>
 
           {/* CHANCE OF RAIN */}
@@ -125,8 +121,7 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
             <td>Rain: <strong> {chanceOfRain[3]}%</strong></td>
             <td>Rain: <strong> {chanceOfRain[4]}%</strong></td>
             <td>Rain: <strong> {chanceOfRain[5]}%</strong></td>
-            <td>Rain: <strong> {chanceOfRain[6]}%</strong></td>
-            <td>Rain: <strong> {chanceOfRain[0]}%</strong></td>
+
           </tr>
         </tbody> 
       </table>
