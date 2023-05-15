@@ -68,12 +68,16 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
 }
 /* Takes current day and makes an array call daysOfWeek with numbers 0-6 (o being Sunday) */
 function ForecastTable({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, windSpeeds }) {
-  const amPM = currentHour > 12 ? 'PM' : 'AM';
+  let amPM = currentHour > 12 ? 'PM' : 'AM';
 
   // Generate table rows for the next 6 hours
   const tableRows = [];
   for (let i = 1; i <= 6; i++) {
-    const hour = currentHour + i;
+    let hour = currentHour + i;
+    if (hour > 12) {
+      hour = hour - 12;
+      amPM = 'PM';
+    }
   
     tableRows.push(
       <tr key={i}>
