@@ -7,6 +7,7 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
   const [chanceOfRain, setChanceOfRain] = useState("");
   const [cloudCoverage, setCloudCoverage] = useState("");
   const [hourlyTemps, setHourlyTemps] = useState("");
+  const [windSpeeds, setWindSpeeds] = useState("");
   const currentHour = new Date().getHours();
 
   //Logs for testing
@@ -38,6 +39,9 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
           setHourlyTemps(response.hourly.temperature_2m);
           console.log("Hourly Temps: " + response.hourly.temperature_2m);
 
+          setWindSpeeds(response.hourly.windspeed_10m);
+          console.log("Hourly WindSpeeds: " + response.hourly.windspeed_10m);
+
           setCloudCoverage(
             response.hourly.cloudcover_mid
           );
@@ -55,8 +59,7 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
   <div>
     <br /><br />
     <div>
-    <ForecastTable temperatureHigh={temperatureHigh} temperatureLow={temperatureLow} cloudCoverage={cloudCoverage} chanceOfRain={chanceOfRain}
-                    hourlyTemps={hourlyTemps} currentHour={currentHour}
+    <ForecastTable cloudCoverage={cloudCoverage} chanceOfRain={chanceOfRain} hourlyTemps={hourlyTemps} currentHour={currentHour} windSpeeds={windSpeeds}
     />
     </div>
   </div>
@@ -64,39 +67,32 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
 
 }
 /* Takes current day and makes an array call daysOfWeek with numbers 0-6 (o being Sunday) */
-function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOfRain, hourlyTemps, currentHour}) {
- const amPM = 'AM'
- 
-  if (currentHour > 12){
-    amPM = 'PM';
-    currentHour = currentHour - 12;
-  }
+function ForecastTable({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, windSpeeds }) {
+  const amPM = currentHour > 12 ? 'PM' : 'AM';
+
+  // Generate table rows for the next 6 hours
+  const tableRows = [];
+  for (let i = 1; i <= 6; i++) {
+    const hour = currentHour + i;
   
- 
+    tableRows.push(
+      <tr key={i}>
+        <td>{hour} {amPM}: &nbsp;&nbsp;</td>
+        <td><WeatherIcon cloudCoverage={cloudCoverage[hour]} /> &nbsp;</td>
+        <td><strong> {hourlyTemps[hour]} &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Rain: <strong> {chanceOfRain[hour]}% &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Wind: <strong> {windSpeeds[hour]} mph</strong></td>
+      </tr>
+    );
+  }
 
   return (
-        <table className="forecastTable">
-        <tbody>
-
-          {/* NEXT HOUR */}
-          <tr>
-          <td>{currentHour + 1} {amPM}: &nbsp;&nbsp;</td>
-          <td><WeatherIcon cloudCoverage={cloudCoverage[1]}/> &nbsp;</td>
-          <td><strong> {hourlyTemps[currentHour + 1]} &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>   
-          <td>Rain: <strong> {chanceOfRain[currentHour +1]}%</strong></td>
-          </tr>
-
-          {/* +2 HOURS*/}
-          <tr>
-          <td>{currentHour + 1} {amPM}: &nbsp;&nbsp;</td>
-          <td><WeatherIcon cloudCoverage={cloudCoverage[1]}/> &nbsp;</td>
-          <td><strong> {hourlyTemps[currentHour + 1]} &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>   
-          <td>Rain: <strong> {chanceOfRain[currentHour +1]}%</strong></td>
-          </tr>
-
-
-        </tbody> 
-      </table>
+    <table className="forecastTableHourly">
+      <tbody>
+        {tableRows}
+      </tbody>
+    </table>
   );
 }
+
 

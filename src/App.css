@@ -107,11 +107,15 @@
 }
 
 .hourly-header {
-  margin-bottom: -25px;
-  margin-top: -35px;
+  margin-bottom: -55px;
+  margin-top: -15px;
 }
 
 .daily-header {
   margin-bottom: -15px;
   margin-top: -5px;
+}
+
+.forecastTableHourly td{
+  padding: -25px;
 }
