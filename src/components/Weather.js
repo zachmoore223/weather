@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import WeatherIcon from "./WeatherIcon.js";
 import Time from "./Time.js";
-import Forecast from "./Forecast.js";
+import DailyForecast from "./DailyForecast.js";
+import HourlyForecast from "./HourlyForecast.js";
 
 export default function Weather() {
   const [activeCity, setActiveCity] = useState("Columbus");
@@ -47,6 +48,7 @@ export default function Weather() {
             response.current_weather.windspeed
           );
           console.log("Wind Speed: " + response.current_weather.windspeed);
+
         });
     }
     changeCity();
@@ -108,12 +110,19 @@ export default function Weather() {
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
                 </li>
             </ul>
-            <br /> <br />
             <ul className="hourly-card">
-            <p> <strong> NEXT FIVE DAYS FORECAST</strong> </p>
-            <Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
+            <p className="hourly-header"> <strong> HOURLY FORECAST </strong> </p>
+            <HourlyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
+
         </div>
+        <br /> <br />
+        <div className="weather-app">
+            <ul className="hourly-card">
+            <p className="daily-header"> <strong> NEXT WEEK </strong> </p>
+            <DailyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
+            </ul>
+         </div>
     </div>
 
   );
