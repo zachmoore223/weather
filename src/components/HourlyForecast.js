@@ -68,26 +68,37 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
 }
 /* Takes current day and makes an array call daysOfWeek with numbers 0-6 (o being Sunday) */
 function ForecastTable({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, windSpeeds }) {
-  let amPM = currentHour > 12 ? 'PM' : 'AM';
+  //currentHour == milatary time, hour = 12 clock time
+  //timeCount needed to display proper time once time goes from 12AM back to beginning of array 1AM
+  const timeDisplay = ["1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM",
+                       "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM", "12 AM",];
+  let timeCount = currentHour;
 
-  // Generate table rows for the next 6 hours
   const tableRows = [];
   for (let i = 1; i <= 6; i++) {
+
+    //currentHour plus i (current hour is military time so + i continues into next day if it goes above 23)
     let hour = currentHour + i;
-    if (hour > 12) {
-      hour = hour - 12;
-      amPM = 'PM';
+
+    if (hour > 12){
+      hour = hour -12;
     }
-  
+
+    // Generate table rows for the next 6 hours
     tableRows.push(
       <tr key={i}>
-        <td>{hour} {amPM}: &nbsp;&nbsp;</td>
-        <td><WeatherIcon cloudCoverage={cloudCoverage[hour]} /> &nbsp;</td>
-        <td><strong> {hourlyTemps[hour]} &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-        <td>Rain: <strong> {chanceOfRain[hour]}% &nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-        <td>Wind: <strong> {windSpeeds[hour]} mph</strong></td>
+        <td>{timeDisplay[timeCount]}: &nbsp;&nbsp;</td>
+        <td><WeatherIcon cloudCoverage={cloudCoverage[currentHour + i]} /> &nbsp;</td>
+        <td><strong> {hourlyTemps[currentHour + i]} &nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Rain: <strong> {chanceOfRain[currentHour + i]}% &nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Wind: <strong> {windSpeeds[currentHour + i]} mph</strong></td>
       </tr>
     );
+
+    timeCount++;
+    if (timeCount > 23){
+      timeCount = timeCount - 23;
+    }
   }
 
   return (
