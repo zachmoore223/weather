@@ -107,8 +107,8 @@
 }
 
 .hourly-header {
-  margin-bottom: -55px;
-  margin-top: -15px;
+  margin-bottom: -40px;
+  margin-top: -5px;
 }
 
 .daily-header {
@@ -118,4 +118,20 @@
 
 .forecastTableHourly td{
   padding: -25px;
+}
+
+.currentWeatherHeader{
+  margin-bottom: 0px;
+}
+
+.weatherIconLarge {
+  margin-top: -20px;
+  margin-bottom: -30px;
+}
+
+.App {
+  background-image: url('\weatherBackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

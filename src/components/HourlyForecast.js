@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherIconSmall from "./WeatherIconSmall.js";
 
 export default function HourlyForecast({activeCity, latitude, longitude}) {
   const [temperatureHigh, setTemperatureHigh] = useState("");
@@ -88,7 +88,7 @@ function ForecastTable({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, 
     tableRows.push(
       <tr key={i}>
         <td>{timeDisplay[timeCount]}: &nbsp;&nbsp;</td>
-        <td><WeatherIcon cloudCoverage={cloudCoverage[currentHour + i]} /> &nbsp;</td>
+        <td><WeatherIconSmall cloudCoverage={cloudCoverage[currentHour + i]} /> &nbsp;</td>
         <td><strong> {hourlyTemps[currentHour + i]} &nbsp;&nbsp;&nbsp;</strong></td>
         <td>Rain: <strong> {chanceOfRain[currentHour + i]}% &nbsp;&nbsp;&nbsp;</strong></td>
         <td>Wind: <strong> {windSpeeds[currentHour + i]} mph</strong></td>

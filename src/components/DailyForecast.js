@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherIconSmall from "./WeatherIconSmall.js";
 
 export default function DailyForecast({activeCity, latitude, longitude}) {
   const [temperatureHigh, setTemperatureHigh] = useState("");
@@ -98,13 +98,13 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
 
           {/* WEATHER ICON BASED ON CLOUD COVERAGE */}
           <tr>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[1]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[2]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[3]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[4]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[5]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[6]}/></td>
-            <td><WeatherIcon cloudCoverage={cloudCoverage[0]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[1]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[2]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[3]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[4]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[5]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[6]}/></td>
+            <td><WeatherIconSmall cloudCoverage={cloudCoverage[0]}/></td>
           </tr>
 
           {/* LOW TEMPERATURES */}

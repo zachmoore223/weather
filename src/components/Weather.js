@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import WeatherIcon from "./WeatherIcon.js";
+import WeatherIcon from "./WeatherIconLarge.js";
 import Time from "./Time.js";
 import DailyForecast from "./DailyForecast.js";
 import HourlyForecast from "./HourlyForecast.js";
@@ -101,7 +101,7 @@ export default function Weather() {
       <div className="weather-app">
             <ul>
                 <li className="weather-card">
-                <p> <strong> {activeCity} </strong>  </p> 
+                <p className="currentWeatherHeader"> <strong> {activeCity} Current </strong>  </p> 
                 <Time />
                 <WeatherIcon cloudCoverage={cloudCoverage} /> &nbsp;&nbsp;
                 <p className="temperature">{temperature} &#8457;</p>
@@ -111,7 +111,7 @@ export default function Weather() {
                 </li>
             </ul>
             <ul className="hourly-card">
-            <p className="hourly-header"> <strong> HOURLY FORECAST </strong> </p>
+            <p className="hourly-header"> <strong> {activeCity} Hour Forecast </strong> </p>
             <HourlyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
 
@@ -119,7 +119,7 @@ export default function Weather() {
         <br /> <br />
         <div className="weather-app">
             <ul className="hourly-card">
-            <p className="daily-header"> <strong> NEXT WEEK </strong> </p>
+            <p className="daily-header"> <strong> {activeCity} Forecast for Next Week </strong> </p>
             <DailyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
          </div>
