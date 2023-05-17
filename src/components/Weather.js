@@ -99,7 +99,7 @@ export default function Weather() {
       </div>
       <br /> <br />
       <div className="weather-app">
-            <ul>
+            <ul className="weatherUL">
                 <li className="weather-card">
                 <p className="currentWeatherHeader"> <strong> {activeCity} Current </strong>  </p> 
                 <Time />
@@ -109,7 +109,7 @@ export default function Weather() {
                 <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
                 </li>
-                
+
             </ul>
             <ul className="hourly-card">
             <p className="hourly-header"> <strong> {activeCity} Hourly Forecast </strong> </p>

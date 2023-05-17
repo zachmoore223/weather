@@ -49,6 +49,10 @@
   width: 200px;
 }
 
+.weatherUL {
+  padding-left: 0px;
+}
+
 .weather-card h3 {
   margin-top: 0;
 }
@@ -191,6 +195,10 @@
   .weather-card h3 {
     margin-top: 0;
   }
+
+  .weatherUL {
+    padding-left: 0px;
+  }
   
   .temperature {
     font-size: 28px;
@@ -232,7 +240,6 @@
   }
   
   .weekly-card {
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -240,14 +247,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     margin-left: 10px;
     text-align: center;
     width: 400px;
   }
   
   .hourly-card {
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -255,8 +260,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin-left: 10px;
     text-align: center;
     width: 400px;
   }
@@ -310,7 +313,6 @@
     padding: 10px 10px; /* reduced padding */
     text-align: center;
     font-size: 13px; /* reduced font size */
-    margin: 2px; /* reduced margin */
     cursor: pointer;
     border-radius: 12px;
     margin-top: 30px;
@@ -325,7 +327,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     text-align: center;
     width: 200px;
   }
@@ -375,7 +376,6 @@
   }
   
   .weekly-card {
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     font-size: x-small;
@@ -385,14 +385,12 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-left: 10px;
     text-align: center;
     width: 400px;
   }
   
   .hourly-card {
     font-size: small;
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -400,8 +398,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin-left: 10px;
     text-align: center;
     width: 400px;
   }
@@ -520,7 +516,6 @@
   }
   
   .weekly-card {
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     font-size: x-small;
@@ -530,14 +525,12 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-left: 10px;
     text-align: center;
     width: 400px;
   }
   
   .hourly-card {
     font-size: x-small;
-    float: left;
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -545,8 +538,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin-left: 10px;
     text-align: center;
     width: 400px;
   }
