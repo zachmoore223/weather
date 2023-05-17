@@ -9,6 +9,11 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
   const [hourlyTemps, setHourlyTemps] = useState("");
   const [windSpeeds, setWindSpeeds] = useState("");
   const currentHour = new Date().getHours();
+  const [showForecastTable, setShowForecastTable] = useState(true);
+
+  const toggleForecastTable = () => {
+    setShowForecastTable(!showForecastTable);
+  };
 
   //Logs for testing
   console.log("Current Hour: " + currentHour);
@@ -59,8 +64,30 @@ export default function HourlyForecast({activeCity, latitude, longitude}) {
   <div>
     <br /><br />
     <div>
-    <ForecastTable cloudCoverage={cloudCoverage} chanceOfRain={chanceOfRain} hourlyTemps={hourlyTemps} currentHour={currentHour} windSpeeds={windSpeeds}
-    />
+
+        {showForecastTable ? (
+      <ForecastTable
+        cloudCoverage={cloudCoverage}
+        chanceOfRain={chanceOfRain}
+        hourlyTemps={hourlyTemps}
+        currentHour={currentHour}
+        windSpeeds={windSpeeds}
+      />
+    ) : (
+      <ForecastTable6MoreHours
+        cloudCoverage={cloudCoverage}
+        chanceOfRain={chanceOfRain}
+        hourlyTemps={hourlyTemps}
+        currentHour={currentHour}
+        windSpeeds={windSpeeds}
+      />
+    )}
+
+<button className="sixHourToggle" onClick={toggleForecastTable}>
+        {showForecastTable ? 'Next Six Hours' : 'Previous Six Hours'}
+      </button>
+
+
     </div>
   </div>
   );
@@ -92,6 +119,53 @@ function ForecastTable({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, 
         <td><strong> {hourlyTemps[currentHour + i]} &nbsp;&nbsp;&nbsp;</strong></td>
         <td>Rain: <strong> {chanceOfRain[currentHour + i]}% &nbsp;&nbsp;&nbsp;</strong></td>
         <td>Wind: <strong> {windSpeeds[currentHour + i]} mph</strong></td>
+      </tr>
+    );
+
+    timeCount++;
+    if (timeCount > 23){
+      timeCount = timeCount - 23;
+    }
+  }
+
+  return (
+    <table className="forecastTableHourly">
+      <tbody>
+        {tableRows}
+      </tbody>
+    </table>
+  );
+}
+
+function ForecastTable6MoreHours({ cloudCoverage, chanceOfRain, hourlyTemps, currentHour, windSpeeds }) {
+  //currentHour == milatary time, hour = 12 clock time
+  //timeCount needed to display proper time once time goes from 12AM back to beginning of array 1AM
+  const timeDisplay = ["1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM",
+                       "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM", "12 AM",];
+  let timeCount = currentHour + 6;
+
+  const tableRows = [];
+  for (let i = 1; i <= 6; i++) {
+
+    //currentHour plus i (current hour is military time so + i continues into next day if it goes above 23)
+    let hour = currentHour + i;
+
+    if (hour > 12){
+      hour = hour -12;
+    }
+
+    if (timeCount > 23){
+      timeCount = timeCount - 23;
+    }
+
+    // Generate table rows for the next 6 hours
+    tableRows.push(
+      <tr key={i}>
+        <td>{timeDisplay[timeCount]}: &nbsp;&nbsp;</td>
+        <td><WeatherIconSmall cloudCoverage={cloudCoverage[currentHour + i + 6]} /> &nbsp;</td>
+        <td><strong> {hourlyTemps[currentHour + i + 6]} &nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Rain: <strong> {chanceOfRain[currentHour + i + 6]}% &nbsp;&nbsp;&nbsp;</strong></td>
+        <td>Wind: <strong> {windSpeeds[currentHour + i + 6]} mph</strong></td>
       </tr>
     );
 

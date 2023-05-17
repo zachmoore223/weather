@@ -1,3 +1,17 @@
+.sixHourToggle {
+  background-color: #E5E5E5;
+  border: none;
+  color: black;
+  padding: 10px 10px; /* reduced padding */
+  text-align: center;
+  font-size: 12px; /* reduced font size */
+  margin: 2px; /* reduced margin */
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+
 .cityButtons {
   /* center vertically */
   display: flex;
@@ -75,7 +89,7 @@
 .weather-app {
   display: flex;
   justify-content: center;
-  margin-right: 40px;
+
 }
 
 .weekly-card {
@@ -215,7 +229,6 @@
     display: flex;
     flex-wrap: wrap; /* Add this line to enable wrapping */
     justify-content: center;
-    margin-right: 40px;
   }
   
   .weekly-card {

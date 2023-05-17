@@ -7,7 +7,6 @@ export default function DailyForecast({activeCity, latitude, longitude}) {
   const [chanceOfRain, setChanceOfRain] = useState("");
   const [cloudCoverage, setCloudCoverage] = useState("");
   const [windSpeed, setWindSpeed] = useState("");
-  const [showForecast, setShowForecast] = useState('weekly');
 
   useEffect(() => {
     function changeCity() {
