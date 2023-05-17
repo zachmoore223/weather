@@ -109,9 +109,10 @@ export default function Weather() {
                 <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
                 </li>
+                
             </ul>
             <ul className="hourly-card">
-            <p className="hourly-header"> <strong> {activeCity} Hour Forecast </strong> </p>
+            <p className="hourly-header"> <strong> {activeCity} Hourly Forecast </strong> </p>
             <HourlyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
 
