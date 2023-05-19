@@ -113,7 +113,7 @@ export default function Weather() {
                 <Time />
                 <WeatherIcon cloudCoverage={cloudCoverage} /> &nbsp;&nbsp;
                 <p className="temperature">{temperature} &#8457;</p>
-                <p> H: <strong> {temperatureHigh} </strong> | L: <strong> {temperatureLow} </strong> </p>
+                <p className="highLow"> H: <strong> {temperatureHigh} </strong> | L: <strong> {temperatureLow} </strong> </p>
                 <p className="wind">Wind Speed: <strong> {windSpeed} mph</strong></p>
                 <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
