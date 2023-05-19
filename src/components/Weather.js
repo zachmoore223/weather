@@ -119,7 +119,7 @@ export default function Weather() {
         </div>
         <br /> <br />
         <div className="weather-app">
-            <ul className="hourly-card">
+            <ul className="weekly-card">
             <p className="daily-header"> <strong> {activeCity} Forecast for Next Week </strong> </p>
             <DailyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
