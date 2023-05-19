@@ -160,9 +160,157 @@
 
 .App {
   background-image: url('\weatherBackground.jpg');
-  background-size: cover;
+background-size: 100% 100% ;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media only screen and (max-width: 870px) {
+  .cityButtons {
+    /* center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cityButton.active {
+    background-color: rgb(148, 175, 159);
+    color: white;
+  }
+  .cityButton {
+    background-color: #E5E5E5;
+    border: none;
+    color: black;
+    padding: 10px 10px; /* reduced padding */
+    text-align: center;
+    font-size: 13px; /* reduced font size */
+    margin: 2px; /* reduced margin */
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+  
+  .weather-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .weather-card h3 {
+    margin-top: 0;
+  }
+
+  .weatherUL {
+    padding-left: 0px;
+  }
+  
+  .temperature {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .icon {
+    height: 50px;
+    margin: 10px 0;
+  }
+  
+  .description {
+    margin: 0;
+  }
+  
+  .forecastButton {
+    font-size: medium;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .forecastButton:hover {
+    color: rgba(123, 0, 255, 0.405);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .weather-app {
+    display: flex;
+    flex-wrap: wrap; /* Add this line to enable wrapping */
+    justify-content: center;
+  }
+  
+  .weekly-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+  }
+  
+  .hourly-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+  }
+  
+  .hourly-header {
+    margin-bottom: -40px;
+    margin-top: -5px;
+  }
+  
+  .daily-header {
+    margin-bottom: -15px;
+    margin-top: -5px;
+  }
+  
+  .forecastTableHourly td{
+    padding: -25px;
+  }
+  
+  .currentWeatherHeader{
+    margin-bottom: 0px;
+  }
+  
+  .weatherIconLarge {
+    margin-top: -20px;
+    margin-bottom: -30px;
+  }
+  
+  .App {
+    background-image: url('\weatherBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .forecastTableHourly td{
+    padding: -0px;
+  }
+  
+  .forecastTable td{
+    padding: 5px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -313,6 +461,154 @@
   }
 }
 
+@media only screen and (max-width: 575px) {
+  .cityButtons {
+    /* center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cityButton.active {
+    background-color: rgb(148, 175, 159);
+    color: white;
+  }
+  .cityButton {
+    background-color: #E5E5E5;
+    border: none;
+    color: black;
+    padding: 10px 10px; /* reduced padding */
+    text-align: center;
+    font-size: 13px; /* reduced font size */
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+  
+  .weather-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .weather-card h3 {
+    margin-top: 0;
+  }
+  
+  .temperature {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .icon {
+    height: 50px;
+    margin: 10px 0;
+  }
+  
+  .description {
+    margin: 0;
+  }
+  
+  .forecastButton {
+    font-size: medium;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .forecastButton:hover {
+    color: rgba(123, 0, 255, 0.405);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  .weather-app {
+    display: flex;
+    flex-wrap: wrap; /* Add this line to enable wrapping */
+    justify-content: center;
+    margin-right: 0px;
+  }
+  
+  .weekly-card {
+    font-size: small;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 340px;
+  }
+  
+  .hourly-card {
+    font-size: small;
+    background-color: #f7f7f7;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 340px;
+  }
+  
+  .hourly-header {
+    margin-bottom: -40px;
+    margin-top: -5px;
+  }
+  
+  .daily-header {
+    margin-bottom: -15px;
+    margin-top: -5px;
+  }
+  
+  .forecastTableHourly td{
+    padding: -25px;
+  }
+  
+  .currentWeatherHeader{
+    margin-bottom: 0px;
+  }
+  
+  .weatherIconLarge {
+    margin-top: -20px;
+    margin-bottom: -30px;
+  }
+  
+  .App {
+    background-image: url('\weatherBackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .forecastTableHourly td{
+    padding: -0px;
+  }
+  
+  .forecastTable{
+    padding: 0px;
+  }
+
+  table {
+    padding: 0px;
+  }
+}
+
 @media only screen and (max-width: 475px) {
   .cityButtons {
     /* center vertically */
@@ -403,7 +699,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 370px;
+    width: 340px;
   }
   
   .hourly-card {
@@ -415,7 +711,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 370px;
+    width: 340px;
   }
   
   .hourly-header {
@@ -461,7 +757,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 415px) {
   .cityButtons {
     /* center vertically */
     display: flex;
@@ -552,7 +848,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 310px;
   }
   
   .hourly-card {
@@ -565,7 +861,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 300px;
   }
   
   .hourly-header {
