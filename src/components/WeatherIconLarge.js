@@ -10,7 +10,7 @@ export default function WeatherIconLarge({ cloudCoverage }) {
 
   //SUNNY
   if (cloudCoverage <= 25) {
-    if(currentHour <= 17){
+    if(currentHour <= 19){
       return <img className="weatherIconLarge" src={sunny} alt="Sunny" width="80" height="80" />;
     } else {
     return <img className="weatherIconLarge" src={clearNight} alt="Clear Night" width="80" height="80" />;

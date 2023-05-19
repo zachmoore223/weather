@@ -4,14 +4,19 @@ import partlyCloudy from "../icons/partlyCloudy.png";
 import cloudy from "../icons/cloudy.png";
 import clearNight from "../icons/clearNight.png";
 import partlyCloudyNight from "../icons/partlyCloudyNight.png";
+import rainCloud from "../icons/rain.png";
 
-export default function WeatherIconSmall({ cloudCoverage }) {
+export default function WeatherIconSmall({ chanceOfRain, cloudCoverage }) {
   const currentHour = new Date().getHours();
 
   //SUNNY
   if (cloudCoverage <= 25) {
-    if(currentHour <= 17){
+    if(currentHour <= 19){
+      if(chanceOfRain >= 50){
+        return <img className="weatherIconSmall" src={rainCloud} alt="Partly Cloudy" width="40" height="40" />;
+      } else {
       return <img className="weatherIconSmall" src={sunny} alt="Sunny" width="40" height="40" />;
+      }
     } else {
     return <img className="weatherIconSmall" src={clearNight} alt="Clear Night" width="40" height="40" />;
     }
@@ -19,7 +24,12 @@ export default function WeatherIconSmall({ cloudCoverage }) {
   //PARTLY CLOUDY
   else if (cloudCoverage > 25 && cloudCoverage < 50) {
     if(currentHour <= 17){
+      if(chanceOfRain >= 50){
+        return <img className="weatherIconSmall" src={rainCloud} alt="Partly Cloudy" width="40" height="40" />;
+      }
+      else{
       return <img className="weatherIconSmall" src={partlyCloudy} alt="Partly Cloudy" width="40" height="40" />;
+      }
     } else {
     return (
       <img className="weatherIconSmall" src={partlyCloudyNight} alt="Partly Cloudy Night" width="40" height="40" />

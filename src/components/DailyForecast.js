@@ -97,13 +97,13 @@ function ForecastTable({temperatureHigh, temperatureLow, cloudCoverage, chanceOf
 
           {/* WEATHER ICON BASED ON CLOUD COVERAGE */}
           <tr>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[1]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[2]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[3]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[4]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[5]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[6]}/></td>
-            <td><WeatherIconSmall cloudCoverage={cloudCoverage[0]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[1]} cloudCoverage={cloudCoverage[1]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[2]} cloudCoverage={cloudCoverage[2]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[3]} cloudCoverage={cloudCoverage[3]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[4]} cloudCoverage={cloudCoverage[4]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[5]} cloudCoverage={cloudCoverage[5]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[6]} cloudCoverage={cloudCoverage[6]}/></td>
+            <td><WeatherIconSmall chanceOfRain={chanceOfRain[0]} cloudCoverage={cloudCoverage[0]}/></td>
           </tr>
 
           {/* LOW TEMPERATURES */}
