@@ -313,7 +313,7 @@
   }
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 475px) {
   .cityButtons {
     /* center vertically */
     display: flex;
@@ -403,7 +403,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 370px;
   }
   
   .hourly-card {
@@ -415,7 +415,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 400px;
+    width: 370px;
   }
   
   .hourly-header {
@@ -596,5 +596,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .forecastTableHourly td{
+    padding: -0px;
+  }
+  
+  .forecastTable{
+    padding: 0px;
+  }
+
+  table {
+    padding: 0px;
   }
 }
