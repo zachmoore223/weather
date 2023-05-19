@@ -111,18 +111,22 @@ export default function Weather() {
                 </li>
 
             </ul>
+            <div className="centerCard">
             <ul className="hourly-card">
             <p className="hourly-header"> <strong> {activeCity} Hourly Forecast </strong> </p>
             <HourlyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
+            </div>
 
         </div>
         <br /> <br />
         <div className="weather-app">
+        <div className="centerCard">
             <ul className="weekly-card">
             <p className="daily-header"> <strong> {activeCity} Forecast for Next Week </strong> </p>
             <DailyForecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />
             </ul>
+            </div>
          </div>
     </div>
 
