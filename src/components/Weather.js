@@ -12,6 +12,8 @@ export default function Weather() {
   const [chanceOfRain, setChanceOfRain] = useState("");
   const [cloudCoverage, setCloudCoverage] = useState("");
   const [windSpeed, setWindSpeed] = useState("");
+  const [temperatureHigh, setTemperatureHigh] = useState("");
+  const [temperatureLow, setTemperatureLow] = useState("");
   const currentHour = new Date().getHours();
 
   //Logs for testing
@@ -34,6 +36,12 @@ export default function Weather() {
 
           setTemperature(response.current_weather.temperature);
           console.log("Temp: " + response.current_weather.temperature);
+
+          setTemperatureHigh(response.daily.apparent_temperature_max[0]);
+          console.log("High Temp: " + response.daily.apparent_temperature_max[0]);
+
+          setTemperatureLow(response.daily.apparent_temperature_min[0]);
+          console.log("Low Temp: " + response.daily.apparent_temperature_min[0]);
 
           setChanceOfRain(
             response.hourly.precipitation_probability[currentHour]);
@@ -105,6 +113,7 @@ export default function Weather() {
                 <Time />
                 <WeatherIcon cloudCoverage={cloudCoverage} /> &nbsp;&nbsp;
                 <p className="temperature">{temperature} &#8457;</p>
+                <p> H: <strong> {temperatureHigh} </strong> | L: <strong> {temperatureLow} </strong> </p>
                 <p className="wind">Wind Speed: <strong> {windSpeed} mph</strong></p>
                 <p className="rain">Chance of Rain:<strong> {chanceOfRain} %</strong></p>
                 {/*<Forecast className="icon" activeCity={activeCity} latitude={latitude} longitude={longitude} />*/}
