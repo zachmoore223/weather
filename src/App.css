@@ -252,9 +252,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
     text-align: center;
-    width: 400px;
+    width: 500px;
   }
   
   .hourly-card {
@@ -297,6 +296,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .forecastTableHourly td{
+    padding: -0px;
+  }
+  
+  .forecastTable td{
+    padding: 5px;
   }
 }
 
@@ -381,15 +388,14 @@
   }
   
   .weekly-card {
+    font-size: small;
     background-color: #f7f7f7;
     border-radius: 10px;
-    font-size: x-small;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     text-align: center;
     width: 400px;
   }
@@ -523,13 +529,11 @@
   .weekly-card {
     background-color: #f7f7f7;
     border-radius: 10px;
-    font-size: x-small;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     text-align: center;
     width: 400px;
   }
