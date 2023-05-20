@@ -725,7 +725,7 @@ background-size: 100% 100% ;
   }
   
   .weekly-card {
-    font-size: small;
+    font-size: x-small;
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
@@ -786,9 +786,12 @@ background-size: 100% 100% ;
     font-size: x-small;
   }
 
-  table {
+  .forecastTable td{
     padding: 0px;
+    margin-left: -5px;
+    font-size: x-small;
   }
+
 }
 
 @media only screen and (max-width: 415px) {
@@ -952,7 +955,10 @@ background-size: 100% 100% ;
     font-size: x-small;
   }
 
-  table {
+  .forecastTable td{
     padding: 0px;
+    margin-left: -5px;
+    font-size: x-small;
   }
+
 }
