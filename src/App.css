@@ -126,8 +126,6 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  padding-left: -10px;
-  margin-left: 0px;
   text-align: center;
   width: 800px;
 }
@@ -152,12 +150,12 @@
 }
 
 .daily-header {
-  margin-bottom: -15px;
-  margin-top: -5px;
+  margin-bottom: 0px;
+  margin-top: 5px;
 }
 
 .forecastTableHourly td{
-  padding: -25px;
+  padding: 0px;
 }
 
 .forecastTable td{
