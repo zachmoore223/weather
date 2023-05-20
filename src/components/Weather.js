@@ -129,7 +129,7 @@ export default function Weather() {
 
         </div>
         <br /> <br />
-        <div className="weather-app">
+        
         <div className="centerCard">
             <ul className="weekly-card">
             <p className="daily-header"> <strong> {activeCity} Forecast for Next Week </strong> </p>
@@ -137,7 +137,6 @@ export default function Weather() {
             </ul>
             </div>
          </div>
-    </div>
 
   );
 }

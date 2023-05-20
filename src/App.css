@@ -127,7 +127,7 @@
   justify-content: center;
   padding: 20px;
   padding-left: -10px;
-  margin-left: 10px;
+  margin-left: 0px;
   text-align: center;
   width: 800px;
 }
@@ -289,6 +289,7 @@ background-size: 100% 100% ;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
     width: 500px;
   }
   
@@ -437,6 +438,7 @@ background-size: 100% 100% ;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
     width: 500px;
   }
   
@@ -581,6 +583,7 @@ background-size: 100% 100% ;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
     width: 340px;
   }
   
@@ -714,21 +717,19 @@ background-size: 100% 100% ;
   
   .weather-app {
     display: flex;
-    flex-wrap: wrap; /* Add this line to enable wrapping */
+    flex-wrap: center; /* Add this line to enable wrapping */
     justify-content: center;
-    margin-right: 0px;
   }
   
   .weekly-card {
     font-size: small;
     background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
     width: 340px;
   }
   
@@ -753,11 +754,7 @@ background-size: 100% 100% ;
     margin-bottom: 2px;
     margin-top: 2px;
   }
-  
-  .forecastTableHourly td{
-    padding: -25px;
-  }
-  
+    
   .currentWeatherHeader{
     margin-bottom: 0px;
   }
@@ -772,13 +769,6 @@ background-size: 100% 100% ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-
-  .centerCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -873,6 +863,7 @@ background-size: 100% 100% ;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 0px;
     width: 310px;
   }
   
