@@ -761,8 +761,7 @@ background-size: 100% 100% ;
   
   .daily-header {
     margin-bottom: 0px;
-    margin-top: 3
-    px;
+    margin-top: 3px;
   }
     
   .currentWeatherHeader{
@@ -963,13 +962,13 @@ background-size: 100% 100% ;
   
   .forecastTable{
     padding: 0px;
-    margin-left: 5px;
+    margin-left: 0px;
     font-size: x-small;
   }
 
   .forecastTable td{
     padding: 0px;
-    margin-left: -5px;
+    margin-left: 0px;
     font-size: x-small;
   }
 
