@@ -180,6 +180,12 @@ background-size: 100% 100% ;
   background-position: center;
 }
 
+.forecastTable td{
+  font-size: medium;
+  padding-top: 0px;
+}
+
+
 @media only screen and (max-width: 870px) {
   .cityButtons {
     /* center vertically */
@@ -734,6 +740,7 @@ background-size: 100% 100% ;
     text-align: center;
     margin-left: 0px;
     width: 360px;
+    height: 200px;
   }
   
   .hourly-card {
@@ -887,6 +894,7 @@ background-size: 100% 100% ;
     text-align: center;
     margin-left: 0px;
     width: 310px;
+    height: 200px;
   }
   
   .hourly-card {
