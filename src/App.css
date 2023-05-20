@@ -774,16 +774,11 @@ background-size: 100% 100% ;
     background-position: center;
   }
 
-  .forecastTableHourly td{
-    padding: -0px;
-  }
-  
-  .forecastTable{
-    padding: 0px;
-  }
 
-  table {
-    padding: 0px;
+  .centerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
