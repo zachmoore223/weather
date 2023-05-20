@@ -607,17 +607,17 @@ background-size: 100% 100% ;
   }
   
   .hourly-header {
-    margin-bottom: -20px;
-    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   
   .daily-header {
-    margin-bottom: -15px;
-    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   
   .forecastTableHourly td{
-    padding: -25px;
+    padding: 0px;
   }
   
   .currentWeatherHeader{
@@ -625,8 +625,8 @@ background-size: 100% 100% ;
   }
   
   .weatherIconLarge {
-    margin-top: -20px;
-    margin-bottom: -30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   
   .App {
@@ -637,7 +637,7 @@ background-size: 100% 100% ;
   }
 
   .forecastTableHourly td{
-    padding: -0px;
+    padding: 0px;
   }
   
   .forecastTable{
@@ -755,12 +755,12 @@ background-size: 100% 100% ;
   }
   
   .hourly-header {
-    margin-bottom: -10px;
-    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   
   .daily-header {
-    margin-bottom: -10px;
+    margin-bottom: 0px;
     margin-top: 3
     px;
   }
@@ -770,8 +770,8 @@ background-size: 100% 100% ;
   }
   
   .weatherIconLarge {
-    margin-top: -20px;
-    margin-bottom: -30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   
   .App {
@@ -782,18 +782,18 @@ background-size: 100% 100% ;
   }
 
   .forecastTableHourly td{
-    padding: -0px;
+    padding: 0px;
   }
   
   .forecastTable{
     padding: 0px;
-    margin-left: -5px;
+    margin-left: 0px;
     font-size: x-small;
   }
 
   .forecastTable td{
     padding: 0px;
-    margin-left: -5px;
+    margin-left: 0px;
     font-size: x-small;
   }
 
@@ -916,17 +916,17 @@ background-size: 100% 100% ;
   }
   
   .hourly-header {
-    margin-bottom: -10px;
-    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   
   .daily-header {
-    margin-bottom: -15px;
+    margin-bottom: 0px;
     margin-top: -5px;
   }
   
   .forecastTableHourly td{
-    padding: -25px;
+    padding: 0px;
   }
   
   .currentWeatherHeader{
@@ -934,8 +934,8 @@ background-size: 100% 100% ;
   }
   
   .weatherIconLarge {
-    margin-top: -20px;
-    margin-bottom: -30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   
   .App {
